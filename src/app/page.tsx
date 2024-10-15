@@ -1,17 +1,8 @@
-import LoadingCase from "@/components/LoadingCase";
-import LoadingSine from "@/components/machine/LoadingSine";
-// import LoadingEarth from "@/components/machine/LoadingEarth";
-import LoadingBezier from "@/components/machine/PinkGraph";
+"use client";
 import TinkersynthMachine from "@/components/machine/TinkerSynthMachine";
-
 export default function Home() {
   return (
-    <div>
-      {/* <Machine/> */}
-      <LoadingBezier isPoweredOn={true} prefersReducedMotion={false}/>
-      <LoadingCase/>
-      <LoadingSine isPoweredOn={true} prefersReducedMotion={false}/>
-      {/* <LoadingEarth isPoweredOn={true}/> */}
+    <div className="w-screen h-screen bg-teal-700 flex justify-center items-center">
       <TinkersynthMachine/>
     </div>
   );
