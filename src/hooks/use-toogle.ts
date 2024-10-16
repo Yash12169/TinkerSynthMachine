@@ -1,13 +1,13 @@
 import React from 'react';
 
-type ToggleFn = (newVal?: any) => void;
+type ToggleFn = (newVal?: boolean) => void;
 
 export default function useToggle(
   initialValue: boolean = false
 ): [boolean, ToggleFn] {
   const [value, setValue] = React.useState(initialValue);
 
-  const toggle = React.useCallback((newVal: any) => {
+  const toggle = React.useCallback((newVal?: boolean) => {
     setValue((v) => {
       // The main use case for this function is to be called without any arguments, which flips the `value` between true/false.
       // However, the user can supply a new boolean value if they want to explicitly turn it on or off.

@@ -15,12 +15,12 @@ import LoadingSlider from './LoadingSlider';
 import LoadingPolar from './LoadingPolar';
 import LoadingCase from '../LoadingCase';
 
-type Props = {};
+
 
 const PANEL_WIDTH = 128;
 const PANEL_HEIGHT = 160;
 
-const TinkersynthMachine = ({}: Props) => {
+const TinkersynthMachine = () => {
   const [isPoweredOn, setIsPoweredOn] = React.useState(false);
   const [isPressingBtn, setIsPressingBtn] = React.useState(false);
 

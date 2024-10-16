@@ -60,13 +60,7 @@ const LoadingEarth = ({ isPoweredOn }: { isPoweredOn: boolean }) => {
           stroke="#32FF98"
           strokeWidth="2"
           strokeLinejoin="round"
-          style={{
-            animation: 'rotateEarth 9s linear infinite',
-            '@keyframes rotateEarth': {
-              from: { transform: 'translateX(-80%)' },
-              to: { transform: 'translateX(65%)' },
-            },
-          }}
+          className="rotateEarth"  // Add the animation class here
         >
           <path d="M8.03333 17.0001L4 12.0501V9.30015L6.30476 8.20015H9.7619L10.9143 10.9501L13.219 10.4001L14.3714 13.1501L12.0667 13.7001L10.3381 16.4501L13.7952 17.5501L16.1 19.7501L13.7952 22.5001L10.9143 24.7001L12.0667 20.8501L10.3381 18.1001L8.03333 17.0001Z" />
           <path d="M19.7038 18.1001L20.5 15.9001L22.7 14.8001L24.9 15.3501H27.1L28.75 18.6501L29.85 21.9501L27.65 24.7001L24.9 24.1501L23.25 19.7501L21.6 20.3001L19.7038 18.1001Z" />

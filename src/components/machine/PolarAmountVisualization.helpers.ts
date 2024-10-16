@@ -1,5 +1,14 @@
 import { mix, normalize, convertPolarToCartesian } from '@/utils/utils';
-
+interface PlotAsPolarCoordinateParams{
+  point: [number,number],
+  width: number,
+  height: number,
+  sampleIndex:number,
+  samplesPerRow: number,
+  omegaRatio: number,
+  omegaRadiusSubtractAmount:number,
+  radiusMultiple?:number
+}
 /*
   Given a cartesian point, figure out what that point would be in polar coordinates, and then convert it back to cartesian coordinates.
 
@@ -20,7 +29,7 @@ export const plotAsPolarCoordinate = ({
   omegaRatio,
   omegaRadiusSubtractAmount,
   radiusMultiple = 1,
-}: any) => {
+}: PlotAsPolarCoordinateParams) => {
   // Normalize the value from 0π to 2π, and then add 0.5π.
   // The added 0.5π is so that the slopes point upwards, instead of to the left.
   // It's effectively a way to rotate by 90deg.

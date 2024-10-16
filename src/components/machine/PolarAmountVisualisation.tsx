@@ -1,5 +1,5 @@
 import React from 'react';
-import { useSpring, animated } from 'react-spring';
+import { useSpring, animated, SpringConfig } from 'react-spring';
 
 import { range, mix } from '@/utils/utils';
 import { plotAsPolarCoordinate } from './PolarAmountVisualization.helpers';
@@ -44,8 +44,6 @@ const calculatePointsForLine = (
       samplesPerRow: numOfPointsPerLine,
       omegaRatio,
       omegaRadiusSubtractAmount: height,
-      polarTanRatio: 0,
-      polarTanMultiplier: 0,
       radiusMultiple: 0.7,
     });
 
@@ -63,7 +61,7 @@ interface Props {
   verticalPadding?: number;
   numOfLines?: number;
   value: number;
-  springConfig?: any;
+  springConfig?: SpringConfig;
   prefersReducedMotion: boolean;
 }
 

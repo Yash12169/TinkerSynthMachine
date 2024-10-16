@@ -32,7 +32,7 @@ const useOscillation = (
     }
 
     let animationFrameId: number;
-    let lastTickAt = performance.now();
+    const lastTickAt = performance.now();
 
     const tick = () => {
       const now = performance.now();
